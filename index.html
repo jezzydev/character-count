@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/results.css" />
+    <title>Frontend Mentor | Character counter</title>
+    <title>Frontend Mentor | Character cresuts.css</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <span class="logo-container">
+          <img src="./assets/images/logo-light-theme.svg" alt="Character Count Logo Light" class="logo-light">
+          <img src="./assets/images/logo-dark-theme.svg" alt="Character Count Logo Dark" class="logo-dark">
+        </span>
+        <button class="theme-btn"></button>
+      </header>
+      <h1 class="title">Analyze your text in real-time.</h1>
+      <main class="main-container">
+        <form class="text-form">
+          <div class="textarea-container">
+            <textarea name="text-content" id="text-content" class="text-content" placeholder="Start typing here… (or paste your text)"></textarea>
+            <p class="validation-msg"><i class="fas fa-info-circle"></i> Limit reached! Your text exceeds 300 characters.</p>
+          </div>
+          
+          <div class="controls-container">
+            <div class="options-container">
+              <label class="label"><input type="checkbox" id="exclude-spaces" name="exclude-spaces"></input>Exclude Spaces<span class="checkmark" tabindex="0"></span></label>
+              <label class="label"><input type="checkbox" id="set-char-limit" name="set-char-limit"></input>Set Character Limit<span class="checkmark" tabindex="0"></span><input type="number" id="char-limit" name="char-limit" class="char-limit" min="1" step="1"/></label>               
+            </div> 
+            <div class="reading-time-container">
+              Approx. reading time:
+              <!-- Insert number -->
+              minutes
+            </div>
+          </div>
+        </form>
+       
+      </main>
+      <div class="results-container">
+        <div class="stats-container">
+          <div class="stats-card total-char">
+            <h2 class="count-value">00</h2>
+            <p class="count-desc">Total Characters</p>
+          </div>
+          <div class="stats-card word-count">
+            <h2 class="count-value">00</h2>
+            <p class="count-desc">Word Count</p>
+          </div>
+          <div class="stats-card sentence-count">
+            <h2 class="count-value">00</h2>
+            <p class="count-desc">Sentence Count</p>
+          </div>
+        </div>
+        <div class="density-container">
+          <h3>Letter Density</h3> <p class="density-message">
+            No characters found. Start typing to see
+            letter density.
+          </p>
+          <ul class="letter-density-list"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./scripts/scripts.js"></script>
+</html>

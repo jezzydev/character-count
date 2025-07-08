@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light dark;
+
+  --bg-light-theme: url(../assets/images/bg-light-theme.png);
+  --bg-dark-theme: url(../assets/images/bg-dark-theme.png);
+  --bg-theme: var(--bg-light-theme);
+
+  --icon-moon: url(../assets/images/icon-moon.svg);
+  --icon-sun: url(../assets/images/icon-sun.svg);
+  --icon-theme: var(--icon-moon);
+
+  --bg-theme-btn: var(--neutral-100);
+
+  --bg-pattern-character-count: url(../assets/images/pattern-character-count.svg);
+  --bg-pattern-sentence-count: url(../assets/images/pattern-sentence-count.svg);
+  --bg-pattern-word-count: url(../assets/images/pattern-word-count.svg);
+
+  --card-pattern: var(--bg-pattern-character-count);
+  --card-bg-color: var(--purple-400);
+
+  /* colors */
+  /* Neutral colors */
+  --neutral-900: #12131a;
+  --neutral-800: #21222c;
+  --neutral-700: #2a2b37;
+  --neutral-600: #404254;
+
+  --neutral-200: #e4e4ef;
+  --neutral-100: #f2f2f7;
+  --neutral-0: #ffffff;
+
+  /* Purple */
+  --purple-400: #d3a0fa;
+  --purple-500: #c27cf8;
+
+  /* Yellow */
+  --yellow-500: #ff9f00;
+
+  /* Orange */
+  --orange-500: #fe8159;
+  --orange-800: #da3701;
+}
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+body {
+  margin: 0;
+  background: var(--bg-theme);
+  color: light-dark(var(--neutral-900), var(--neutral-100));
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+html,
+input,
+button,
+textarea {
+  font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+h1,
+h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -1px;
+}
+
+p,
+input,
+label {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.6px;
+}
+
+textarea {
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.6px;
+}
+
+.light {
+  color-scheme: light;
+  --bg-theme: var(--bg-light-theme);
+  --icon-theme: var(--icon-moon);
+  --bg-theme-btn: var(--neutral-100);
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-theme: var(--bg-dark-theme);
+  --icon-theme: var(--icon-sun);
+  --bg-theme-btn: var(--neutral-700);
+}
+
+.container {
+  margin: 0 auto;
+  /* width: fit-content; */
+  max-width: 990px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.title {
+  margin: 0 auto;
+  text-align: center;
+  padding: 0px 16px;
+  max-width: 510px;
+}
+
+.text-preset1 {
+  font-size: 64px; /* 4em */
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+
+.text-preset1-mobile {
+  font-size: 40px; /* 2.5em */
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: -1px;
+}
+
+.text-preset2 {
+  font-size: 24px; /* 1.5 em*/
+  font-weight: 600;
+  line-height: 130%;
+  letter-spacing: -1px;
+}
+
+.text-preset3 {
+  font-size: 20px; /* 1.25em */
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.6px;
+}
+
+.text-preset4 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 130%;
+  letter-spacing: -0.6px;
+}
+
+@media screen and (min-width: 768px) {
+  h1,
+  h2 {
+    font-size: 64px; /* 4em */
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .container {
+    gap: 48px;
+  }
+}
