@@ -5,6 +5,7 @@ const dark = 'dark';
 const textarea = document.querySelector('.text-content');
 const excludeSpacesChkbox = document.querySelector('#exclude-spaces');
 const setCharLimitChkbox = document.querySelector('#set-char-limit');
+const charLimitInput = document.querySelector('#char-limit');
 
 themeBtn.addEventListener('click', toggleTheme);
 
@@ -33,24 +34,31 @@ excludeSpacesChkbox.addEventListener('change', function () {
     updateTotalCharacters(textarea.value, this.checked);
 });
 
+charLimitInput.addEventListener('input', function () {
+    startCount(textarea.value);
+});
+
 textarea.addEventListener('input', (event) => {
-    const text = event.target.value;
+    startCount(event.target.value);
+});
 
+function startCount(text) {
     if (setCharLimitChkbox.checked) {
-        const limit = document.querySelector('#char-limit');
 
-        if (text.length > limit.value) {
-            event.target.setCustomValidity("Limit Reached!");
-            document.querySelector('.limit-text').innerText = limit.value;
-            return;
+        if (text.length > charLimitInput.value) {
+            textarea.setCustomValidity("Limit Reached!");
+            document.querySelector('.limit-text').innerText = charLimitInput.value;
+            text = text.slice(0, charLimitInput.value);
+        }
+        else {
+            textarea.setCustomValidity("");
         }
     }
 
-    event.target.setCustomValidity("");
     updateTotalCharacters(text, excludeSpacesChkbox.checked);
     updateTotalWords(text);
     updateTotalSentences(text);
-});
+}
 
 function updateTotalCharacters(text, excludeSpaces) {
     document.querySelector('#total-char').innerText = countTotalCharacters(text, excludeSpaces);

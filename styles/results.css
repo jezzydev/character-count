@@ -23,12 +23,12 @@
     var(--card-bg-color);
 }
 
-.stats-card.word-count {
+.stats-card:has(#total-word) {
   --card-pattern: var(--bg-pattern-word-count);
   --card-bg-color: var(--yellow-500);
 }
 
-.stats-card.sentence-count {
+.stats-card:has(#total-sentence) {
   --card-pattern: var(--bg-pattern-sentence-count);
   --card-bg-color: var(--orange-500);
 }
