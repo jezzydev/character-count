@@ -34,7 +34,7 @@
         <form class="text-form">
           <div class="textarea-container">
             <textarea name="text-content" id="text-content" class="text-content" placeholder="Start typing here… (or paste your text)"></textarea>
-            <p class="validation-msg"><i class="fas fa-info-circle"></i> Limit reached! Your text exceeds <span class="limit-text"></span> characters.</p>
+            <p class="validation-msg"><span class="icon-info"></span> Limit reached! Your text exceeds <span class="limit-text"></span> characters.</p>
           </div>
           
           <div class="controls-container">
@@ -44,8 +44,7 @@
             </div> 
             <div class="reading-time-container">
               Approx. reading time:
-              <!-- Insert number -->
-              minutes
+              <span class="reading-time">0 minute</span>               
             </div>
           </div>
         </form>
@@ -67,7 +66,15 @@
           </div>
         </div>
         <div class="density-container">
-          <h3>Letter Density</h3> <p class="density-message">
+          <h3>Letter Density</h3> 
+          <div class="density-list">
+            <ul class="letter-density-list">
+            </ul>
+            <ul class="more-list">
+            </ul>            
+          </div>
+          <button class="see-btn" type="button">See More<i class="fa-solid fa-angle-down icon-arrowhead"></i></button>
+          <p class="density-message">
             No characters found. Start typing to see
             letter density.
           </p>

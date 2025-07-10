@@ -11,7 +11,6 @@
 }
 
 .stats-card {
-  /* width: 343px; */
   height: 130px;
   border-radius: 12px;
   border: none;
@@ -21,6 +20,7 @@
   align-content: center;
   background: var(--card-pattern) right -50px center / 150px no-repeat,
     var(--card-bg-color);
+  color: var(--neutral-900);
 }
 
 .stats-card:has(#total-word) {
@@ -38,6 +38,64 @@
   font-weight: 400;
   line-height: 140%;
   letter-spacing: -0.6px;
+}
+
+/* letter density */
+.density-container {
+  display: grid;
+  gap: 20px;
+  align-items: center;
+}
+
+ul.more-list {
+  display: none;
+  list-style-type: none;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+ul.letter-density-list {
+  list-style-type: none;
+  display: grid;
+  gap: 12px;
+}
+
+li.density-item {
+  display: grid;
+  grid-template-columns: 16px 1fr auto;
+  gap: 14px;
+  align-items: center;
+}
+
+.density-item .progressbar {
+  height: 12px;
+  border-radius: 999px;
+}
+
+.density-item .progressbar-bg {
+  background-color: light-dark(var(--neutral-100), var(--neutral-800));
+}
+
+.density-item .progressbar-fill {
+  width: 25%;
+  background-color: var(--purple-400);
+}
+
+.see-btn {
+  height: 28px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  text-align: start;
+  font-size: 1.25em;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.6px;
+  outline: none;
+}
+
+.see-btn .icon-arrowhead {
+  margin-left: 8px;
 }
 
 @media screen and (min-width: 768px) {
