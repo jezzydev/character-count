@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor: Character Count](https://www.frontendmentor.io/solutions/character-count-using-html-css-and-javascript-zrclXDvxMj)
+- Live Site URL: [Character Count](https://jezzydev.github.io/character-count/)
 
 ## My process
 
