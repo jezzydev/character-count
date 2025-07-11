@@ -128,7 +128,6 @@ textarea {
 
 .container {
   margin: 0 auto;
-  /* width: fit-content; */
   max-width: 990px;
   display: flex;
   flex-direction: column;
@@ -141,41 +140,6 @@ textarea {
   padding: 0px 16px;
   max-width: 510px;
   color: light-dark(var(--neutral-900), var(--neutral-100));
-}
-
-.text-preset1 {
-  font-size: 64px; /* 4em */
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -1px;
-}
-
-.text-preset1-mobile {
-  font-size: 40px; /* 2.5em */
-  font-weight: 700;
-  line-height: 100%;
-  letter-spacing: -1px;
-}
-
-.text-preset2 {
-  font-size: 24px; /* 1.5 em*/
-  font-weight: 600;
-  line-height: 130%;
-  letter-spacing: -1px;
-}
-
-.text-preset3 {
-  font-size: 20px; /* 1.25em */
-  font-weight: 400;
-  line-height: 140%;
-  letter-spacing: -0.6px;
-}
-
-.text-preset4 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 130%;
-  letter-spacing: -0.6px;
 }
 
 @media screen and (min-width: 768px) {

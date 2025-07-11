@@ -94,7 +94,6 @@ function startCount(text) {
     updateTotalCharacters(charCount);
     updateTotalWords(wordCount);
     updateTotalSentences(sentenceCount);
-
     updateLetterDensity(text);
 }
 
@@ -124,7 +123,7 @@ function updateReadingTime(value) {
 }
 
 function updateLetterDensity(text) {
-    const newText = text.toUpperCase().match(/[A-Z]/g);
+    const newText = text?.toUpperCase().match(/[A-Z]/g);
     const sortedList = calcLetterDensities(newText);
     prepareLetterDensityResults(sortedList, newText.length);
 }
